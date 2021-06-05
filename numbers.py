@@ -1,0 +1,16 @@
+import re
+
+
+
+
+def number_check(x):
+    if x.isnumeric():
+        return True
+    else:
+        value = re.compile(r'^[-+]?[0-9]+\.[0-9]+$')       # 定义正则表达式
+        result = value.match(x)
+        if result:
+            return True
+        else:
+            return False
+
